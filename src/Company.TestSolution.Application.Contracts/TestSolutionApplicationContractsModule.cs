@@ -1,4 +1,4 @@
-﻿using Volo.Abp.Account;
+using Volo.Abp.Account;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -11,6 +11,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
 using Volo.Saas.Host;
 using Volo.Abp.Gdpr;
+using TestModuleA;
 
 namespace Company.TestSolution;
 
@@ -30,7 +31,8 @@ namespace Company.TestSolution;
     typeof(AbpGdprApplicationContractsModule),
     typeof(TextTemplateManagementApplicationContractsModule)
 )]
-public class TestSolutionApplicationContractsModule : AbpModule
+[DependsOn(typeof(TestModuleAApplicationContractsModule))]
+    public class TestSolutionApplicationContractsModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

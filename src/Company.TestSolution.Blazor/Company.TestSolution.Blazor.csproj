@@ -21,7 +21,7 @@
     <PackageReference Include="Blazorise.Bootstrap5" Version="1.0.4" />
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="6.0.5" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\TestModuleA\src\TestModuleA.Blazor.Server\TestModuleA.Blazor.Server.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="5.3.4" />

@@ -15,6 +15,7 @@ using Volo.Abp.TextTemplateManagement.EntityFrameworkCore;
 using Volo.Saas.EntityFrameworkCore;
 using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.Gdpr;
+using TestModuleA.EntityFrameworkCore;
 
 namespace Company.TestSolution.EntityFrameworkCore;
 
@@ -34,7 +35,8 @@ namespace Company.TestSolution.EntityFrameworkCore;
     typeof(AbpGdprEntityFrameworkCoreModule),
     typeof(BlobStoringDatabaseEntityFrameworkCoreModule)
     )]
-public class TestSolutionEntityFrameworkCoreModule : AbpModule
+[DependsOn(typeof(TestModuleAEntityFrameworkCoreModule))]
+    public class TestSolutionEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

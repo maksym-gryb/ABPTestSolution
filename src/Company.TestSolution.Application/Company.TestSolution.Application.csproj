@@ -10,7 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Company.TestSolution.Domain\Company.TestSolution.Domain.csproj" />
     <ProjectReference Include="..\Company.TestSolution.Application.Contracts\Company.TestSolution.Application.Contracts.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\TestModuleA\src\TestModuleA.Application\TestModuleA.Application.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="5.3.4" />

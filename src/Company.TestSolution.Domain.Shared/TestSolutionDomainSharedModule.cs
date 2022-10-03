@@ -18,6 +18,7 @@ using Volo.Saas;
 using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.Gdpr;
 using Volo.Abp.GlobalFeatures;
+using TestModuleA;
 
 namespace Company.TestSolution;
 
@@ -37,7 +38,8 @@ namespace Company.TestSolution;
     typeof(AbpGlobalFeaturesModule),
     typeof(BlobStoringDatabaseDomainSharedModule)
     )]
-public class TestSolutionDomainSharedModule : AbpModule
+[DependsOn(typeof(TestModuleADomainSharedModule))]
+    public class TestSolutionDomainSharedModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Volo.Abp.Account;
 using Volo.Abp.AuditLogging;
@@ -15,6 +15,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
 using Volo.Saas.Host;
+using TestModuleA;
 
 namespace Company.TestSolution;
 
@@ -35,7 +36,8 @@ namespace Company.TestSolution;
     typeof(AbpGdprApplicationModule),
     typeof(TextTemplateManagementApplicationModule)
     )]
-public class TestSolutionApplicationModule : AbpModule
+[DependsOn(typeof(TestModuleAApplicationModule))]
+    public class TestSolutionApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

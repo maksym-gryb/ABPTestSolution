@@ -1,0 +1,7 @@
+{
+  "culture": "tr",
+  "texts": {
+    "SamplePageMessage": "TestModuleA modulünden örnek bir sayfa",
+    "Menu:TestModuleA": "Proje Adı"
+  }
+}

@@ -21,6 +21,7 @@ using Volo.Saas;
 using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.Commercial.SuiteTemplates;
 using Volo.Abp.Gdpr;
+using TestModuleA;
 
 namespace Company.TestSolution;
 
@@ -43,7 +44,8 @@ namespace Company.TestSolution;
     typeof(AbpGdprDomainModule),
     typeof(BlobStoringDatabaseDomainModule)
     )]
-public class TestSolutionDomainModule : AbpModule
+[DependsOn(typeof(TestModuleADomainModule))]
+    public class TestSolutionDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

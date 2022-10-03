@@ -17,6 +17,7 @@ using Volo.Saas.EntityFrameworkCore;
 using Volo.Saas.Editions;
 using Volo.Saas.Tenants;
 using Volo.Abp.Gdpr;
+using TestModuleA.EntityFrameworkCore;
 
 namespace Company.TestSolution.EntityFrameworkCore;
 
@@ -91,5 +92,6 @@ public class TestSolutionDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
-    }
+        builder.ConfigureTestModuleA();
+        }
 }

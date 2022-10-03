@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
@@ -53,6 +53,7 @@ using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.Gdpr.Blazor.Server;
 using Volo.Abp.Http.Client.Web;
 using Volo.Abp.Http.Client.IdentityModel.Web;
+using TestModuleA.Blazor.Server;
 
 namespace Company.TestSolution.Blazor;
 
@@ -80,7 +81,8 @@ namespace Company.TestSolution.Blazor;
     typeof(AbpGdprBlazorServerModule),
     typeof(TestSolutionHttpApiClientModule)
     )]
-public class TestSolutionBlazorModule : AbpModule
+[DependsOn(typeof(TestModuleABlazorServerModule))]
+    public class TestSolutionBlazorModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
