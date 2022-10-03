@@ -21,4 +21,6 @@
     <Content Remove="Localization\TestModuleA\*.json" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties localization_4testmodulea_4en_1json__JsonSchema="https://blockprotocol.org/schemas/block-metadata.json" /></VisualStudio></ProjectExtensions>
+
 </Project>

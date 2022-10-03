@@ -2,6 +2,8 @@
   "culture": "en",
   "texts": {
     "SamplePageMessage": "A sample page for the TestModuleA module",
-    "Menu:TestModuleA": "TestModuleA"
+    "Menu:TestModuleA": "TestModuleA",
+    "Feature1": "Feature Number One",
+    "Feature2": "Feature Number Two"
   }
 }

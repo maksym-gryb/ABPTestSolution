@@ -2,5 +2,6 @@
 
 public class SampleDto
 {
-    public int Value { get; set; }
+    public string FeatureName { get; set; }
+    public bool FeatureValue { get; set; }
 }
