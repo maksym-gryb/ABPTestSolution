@@ -9,6 +9,7 @@ public class TestModuleAPermissionDefinitionProvider : PermissionDefinitionProvi
     public override void Define(IPermissionDefinitionContext context)
     {
         var myGroup = context.AddGroup(TestModuleAPermissions.GroupName, L("Permission:TestModuleA"));
+        myGroup.AddPermission(TestModuleAPermissions.SettingManagement);
     }
 
     private static LocalizableString L(string name)

@@ -1,5 +1,6 @@
 ﻿using Volo.Abp.Domain;
 using Volo.Abp.Modularity;
+using Volo.Abp.SettingManagement;
 
 namespace TestModuleA;
 
@@ -7,6 +8,7 @@ namespace TestModuleA;
     typeof(AbpDddDomainModule),
     typeof(TestModuleADomainSharedModule)
 )]
+[DependsOn(typeof(AbpSettingManagementDomainModule))]
 public class TestModuleADomainModule : AbpModule
 {
 

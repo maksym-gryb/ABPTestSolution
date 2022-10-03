@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Blazorise.Snackbar
+
+@attribute [Authorize(Permissions.TestModuleAPermissions.SettingManagement)]
+@inherits TestModuleAComponentBase
+
+<Form>
+    @foreach (var setting in Settings)
+    {
+        <Row>
+            <Field>
+                <FieldLabel>@L[@setting.Name]</FieldLabel>
+                <TextEdit @bind-Text="@setting.Value" />
+            </Field>
+        </Row>
+    }
+
+    <hr />
+
+    <Row>
+        <Column>
+            <SubmitButton Clicked="SaveSettings">Save</SubmitButton>
+        </Column>
+    </Row>
+</Form>
+
+<SnackbarStack @ref="snackbar" Location="SnackbarStackLocation.End" />

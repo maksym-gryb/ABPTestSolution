@@ -25,7 +25,8 @@ public class SampleAppService : TestModuleAAppService, ISampleAppService
             });
     }
 
-    [Authorize]
+    //[Authorize]
+    [RequiresFeature("TestModuleA.Feature1")]
     public async Task<SampleDto> GetAuthorizedAsync()
     {
         return (
